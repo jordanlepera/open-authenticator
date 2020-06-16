@@ -1,4 +1,4 @@
-const { contextBridge, ipcRenderer } = require("electron");
+const { contextBridge, ipcRenderer, clipboard } = require("electron");
 const fs = require("fs");
 const i18nextBackend = require("i18next-electron-fs-backend");
 const Store = require("secure-electron-store").default;
@@ -12,5 +12,6 @@ let store = new Store();
 contextBridge.exposeInMainWorld("api", {
   i18nextElectronBackend: i18nextBackend.preloadBindings(ipcRenderer),
   store: store.preloadBindings(ipcRenderer, fs),
-  contextMenu: ContextMenu.preloadBindings(ipcRenderer)
+  contextMenu: ContextMenu.preloadBindings(ipcRenderer),
+  copyToClipboard: (code) => clipboard.writeText(code)
 });

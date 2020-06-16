@@ -96,3 +96,7 @@ dist/
 
 # VSCode specific
 .vscode/
+
+# secure-electron-store data
+data.json
+iv.txt

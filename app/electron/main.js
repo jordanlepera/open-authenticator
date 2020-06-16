@@ -41,9 +41,11 @@ async function createWindow() {
 
   // Create the browser window.
   win = new BrowserWindow({
-    width: 800,
+    width: 580,
     height: 600,
-    title: `Getting started with secure-electron-template (v${app.getVersion()})`,
+    // resizable: false,
+    titleBarStyle: 'hiddenInset',
+    title: `Open Authenticator (v${app.getVersion()})`,
     webPreferences: {
       devTools: isDev,
       nodeIntegration: false,
@@ -67,7 +69,7 @@ async function createWindow() {
   };
 
   const store = new Store({
-    path: app.getPath("userData")
+    path: app.getPath("userData"),
   });
   store.mainBindings(ipcMain, win, fs, callback);
 

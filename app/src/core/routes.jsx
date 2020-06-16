@@ -6,6 +6,7 @@ import Motd from "Pages/motd/motd";
 import Localization from "Pages/localization/localization";
 import UndoRedo from "Pages/undoredo/undoredo";
 import ContextMenu from "Pages/contextmenu/contextmenu";
+import Main from "Pages/main/Main"
 
 class Routes extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class Routes extends React.Component {
         <Route path={ROUTES.LOCALIZATION} component={Localization}></Route>
         <Route path={ROUTES.UNDOREDO} component={UndoRedo}></Route>
         <Route path={ROUTES.CONTEXTMENU} component={ContextMenu}></Route>
+        <Route path={ROUTES.MAIN} component={Main}></Route>
       </Switch>
     );
   }

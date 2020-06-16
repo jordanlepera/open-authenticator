@@ -1,7 +1,8 @@
 {
-  "WELCOME": "/",
+  "WELCOME": "/welcome",
   "MOTD": "/motd",
   "LOCALIZATION": "/localization",
   "UNDOREDO": "/undoredo",
-  "CONTEXTMENU": "/contextmenu"
+  "CONTEXTMENU": "/contextmenu",
+  "MAIN": "/"
 }

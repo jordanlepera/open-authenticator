@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const merge = require("webpack-merge");
 const base = require("./webpack.config");
 const path = require("path");
+const nonce = require("./create-nonce")();
 
 module.exports = merge(base, {
   mode: "development",
@@ -22,14 +23,15 @@ module.exports = merge(base, {
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "app/src/index.html"),
-      filename: "index.html"
+      template: path.resolve(__dirname, "app/src/index.ejs"),
+      filename: "index.html",
+      nonce: nonce
     }),
     new CspHtmlWebpackPlugin({
       "base-uri": ["'self'"],
       "object-src": ["'none'"],
       "script-src": ["'self'"],
-      "style-src": ["'self'"],
+      "style-src": ["'self'", `'nonce-${nonce}'`],
       "frame-src": ["'none'"],
       "worker-src": ["'none'"]
     })
