@@ -154,7 +154,7 @@ const EditAuthenticator = withStyles(styles)((props) => {
       newObj.account = values.account;
     }
     if (values.key !== obj.key) {
-      newObj.key = values.key;
+      newObj.key = values.key.replace(/\s/g, '');
     }
     if (values.timeBased !== obj.timeBased) {
       newObj.timeBased = values.timeBased;

@@ -121,8 +121,8 @@ const AuthenticatorItem = (props) => {
           <CircularProgressWithLabel value={progress} thickness={10} size={60} />
         </Grid>
         {/* <Grid item container alignItems="center" justify="flex-end">
-          <Button variant="outlined" onClick={copyCodeToClipboard}>Copier</Button>
-        </Grid> */}
+            <Button variant="outlined" onClick={copyCodeToClipboard}>Copier</Button>
+          </Grid> */}
         <Grid item container alignItems="center" justify="flex-end" wrap="nowrap">
           <Tooltip title="Copier">
             <IconButton onClick={copyCodeToClipboard}>
@@ -140,8 +140,8 @@ const AuthenticatorItem = (props) => {
             </IconButton>
           </Tooltip>
           {/* <IconButton>
-            <ReorderIcon />
-          </IconButton> */}
+              <ReorderIcon />
+            </IconButton> */}
         </Grid>
       </Grid>
     </Container>

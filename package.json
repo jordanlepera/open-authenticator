@@ -7,15 +7,15 @@
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
     "dev-server": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack.development.js",
-    "dev": "concurrently --success first \"npm run dev-server\" \"cross-env NODE_ENV=development electron .\" -k",
+    "dev": "concurrently --success first \"yarn dev-server\" \"cross-env NODE_ENV=development electron .\" -k",
     "prod-build": "cross-env NODE_ENV=production npx webpack --mode=production --config ./webpack.production.js",
-    "prod": "npm run prod-build && electron .",
+    "prod": "yarn prod-build && electron .",
     "pack": "electron-builder --dir",
-    "dist": "npm run prod-build && electron-builder",
-    "dist-mac": "npm run prod-build && electron-builder --mac",
-    "dist-linux": "npm run prod-build && electron-builder --linux",
-    "dist-windows": "npm run prod-build && electron-builder --windows",
-    "dist-all": "npm run prod-build && electron-builder --mac --linux --windows"
+    "dist": "yarn prod-build && electron-builder",
+    "dist-mac": "yarn prod-build && electron-builder --mac",
+    "dist-linux": "yarn prod-build && electron-builder --linux",
+    "dist-windows": "yarn prod-build && electron-builder --windows",
+    "dist-all": "yarn prod-build && electron-builder --mac --linux --windows"
   },
   "build": {
     "productName": "Open Authenticator",

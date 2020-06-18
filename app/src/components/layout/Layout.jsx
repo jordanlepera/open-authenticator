@@ -15,6 +15,8 @@ import './layout.css';
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
+    width: '100%',
+    height: '100%'
   },
   root: {
     flexGrow: 1,
@@ -44,7 +46,9 @@ const AppBarDraggable = styled(AppBar)({
 });
 
 const ContentMargin = styled('div')({
-  margin: 20,
+  padding: 20,
+  width: '100%',
+  height: 'calc(100% - 65px)'
 });
 
 const Layout = (props) => {

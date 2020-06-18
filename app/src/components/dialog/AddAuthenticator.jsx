@@ -147,7 +147,7 @@ const AddAuthenticator = withStyles(styles)((props) => {
         id: uniqueId(),
         name: values.name,
         account: values.account,
-        key: values.key,
+        key: values.key.replace(/\s/g, ''),
         timeBased: values.timeBased
       };
       newObj.push(newElem);
@@ -163,7 +163,7 @@ const AddAuthenticator = withStyles(styles)((props) => {
   return (
     <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={openAdd}>
       <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-        Ajout d'un générateur de code
+        Ajouter un générateur de code
       </DialogTitle>
       <MuiDialogContent dividers>
         <Grid container className={classes.gridContainer}>
