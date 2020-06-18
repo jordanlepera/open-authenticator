@@ -1,5 +1,5 @@
 # Open Authenticator
-![logo](https://github.com/jordanlepera/open-authenticator/blob/master/resources/icon.png =200x200)
+![logo](https://github.com/jordanlepera/open-authenticator/blob/master/resources/icon.ico "Logo")
 
 # Description
 An Electron.js App for 2FA with One-time Password provider.
