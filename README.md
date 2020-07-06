@@ -13,10 +13,9 @@ An Electron.js App for 2FA with One-time Password provider.
 * Electron security policy compliant
 
 ### Next steps
-* Redux implementation
 * HOTP (Hash-based One-Time Password) generator
 * Dark/light theme
-* Implement some cool animations with react-flip-toolkit & anime.js
+* Implement some cool animations
 
 # Author
 Jordan Le Pera
