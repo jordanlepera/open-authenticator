@@ -1,5 +1,6 @@
 {
   "name": "open-authenticator",
+  "productName": "Open Authenticator",
   "version": "0.0.1",
   "description": "An Electron.js App for 2FA with One-time Password provider.",
   "private": true,
